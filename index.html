@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="form-crear" onsubmit="createTodo()">
+        <input type="text" name = "nombre" placeholder = "Nombre de la tarea" required>
+        <select name="estado">
+            <option value="" selected>-----</option>
+            <option value="all"> Por hacer </option>
+            <option value="in_progress"> En progreso </option>
+            <option value="done"> Completada</option>
+        </select>
+        <label for="description">Descripción</label>
+        <textarea name="description" rwos="3"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <table id="table-task">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+    </table>
+    
+    <script src="conexiones.js"></script>
+</body>
+</html>
